@@ -1,0 +1,26 @@
+{
+	"name": "@pnxdxt/tsconfig",
+	"version": "0.0.1",
+	"description": "Shared TypeScript config for my projects",
+	"license": "MIT",
+	"repository": "pnxdxt/tsconfig",
+	"author": {
+		"name": "pnxdxt",
+		"email": "pnxdxt@gmail.com",
+		"url": "https://pnxdxt.com"
+	},
+	"main": "tsconfig.json",
+	"engines": {
+		"node": ">=14"
+	},
+	"files": [
+		"tsconfig.json"
+	],
+	"keywords": [
+		"tsconfig",
+		"typescript",
+		"ts",
+		"config",
+		"configuration"
+	]
+}
