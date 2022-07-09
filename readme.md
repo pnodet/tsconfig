@@ -2,13 +2,15 @@
 
 > Shared [TypeScript config](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) for my projects
 
+This config is intended to be used in nextjs projects.
+
 ## Install
 
 ```sh
 yarn add -D @pnxdxt/tsconfig
 ```
 
-*This config requires TypeScript 4.7 or later.*
+_This config requires TypeScript 4.7 or later._
 
 ## Usage
 
@@ -18,19 +20,11 @@ yarn add -D @pnxdxt/tsconfig
 {
 	"extends": "@pnxdxt/tsconfig",
 	"compilerOptions": {
-		"outDir": "dist"
-	}
-}
-```
-
-When you are targeting a higher version of Node.js, check the relevant ECMAScript version and add it as `target`:
-
-```json
-{
-	"extends": "@pnxdxt/tsconfig",
-	"compilerOptions": {
-		"outDir": "dist",
-		"target": "ES2021"
+		"baseUrl": ".",
+		"paths": {
+			"@/pages/*": ["pages/*"],
+			"@/api/*": ["pages/api/*"],
+		}
 	}
 }
 ```
