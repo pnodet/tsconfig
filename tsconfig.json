@@ -1,13 +1,12 @@
 {
 	"compilerOptions": {
-		"module": "node16",
-		"moduleResolution": "node16",
-		"moduleDetection": "force",
+		"module": "ES2020",
+		"moduleResolution": "node",
 		"target": "ES2020",
 		"lib": ["DOM", "DOM.Iterable", "ES2020"],
 		"allowSyntheticDefaultImports": true,
 		"resolveJsonModule": false,
-		"jsx": "react",
+		"jsx": "preserve",
 		"declaration": true,
 		"pretty": true,
 		"newLine": "lf",
@@ -27,18 +26,5 @@
 		"useDefineForClassFields": true,
 		"esModuleInterop": true,
 		"skipLibCheck": true,
-		"baseUrl": ".",
-		"paths": {
-			"@/components/*": ["components/*"],
-			"@/hooks/*": ["hooks/*"],
-			"@/layouts/*": ["layouts/*"],
-			"@/lib/*": ["lib/*"],
-			"@/pages/*": ["pages/*"],
-			"@/api/*": ["pages/api/*"],
-			"@/public/*": ["public/*"],
-			"@/styles/*": ["styles/*"]
-		}
-	},
-	"include": ["next-env.d.ts", "additional.d.ts", "**/*.ts", "**/*.tsx"],
-	"exclude": ["node_modules"]
+	}
 }
