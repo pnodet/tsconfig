@@ -1,25 +1,21 @@
 {
 	"compilerOptions": {
-		// Disabled because of https://github.com/Microsoft/TypeScript/issues/29172
-		// "outDir": "dist",
-
 		"module": "node16",
 		"moduleResolution": "node16",
 		"moduleDetection": "force",
-		"target": "ES2020", // Node.js 14
-		"lib": [
-			"DOM",
-			"DOM.Iterable",
-			"ES2020"
-		],
-		"allowSyntheticDefaultImports": true, // To provide backwards compatibility, Node.js allows you to import most CommonJS packages with a default import. This flag tells TypeScript that it's okay to use import on CommonJS modules.
-		"resolveJsonModule": false, // ESM doesn't yet support JSON modules.
+		"target": "ES2020",
+		"lib": ["DOM", "DOM.Iterable", "ES2020"],
+		"allowSyntheticDefaultImports": true,
+		"resolveJsonModule": false,
 		"jsx": "react",
 		"declaration": true,
 		"pretty": true,
 		"newLine": "lf",
 		"stripInternal": true,
 		"strict": true,
+		"noEmit": true,
+		"noEmitOnError": true,
+		"isolatedModules": true,
 		"noImplicitReturns": true,
 		"noImplicitOverride": true,
 		"noUnusedLocals": true,
@@ -27,9 +23,22 @@
 		"noFallthroughCasesInSwitch": true,
 		"noUncheckedIndexedAccess": true,
 		"noPropertyAccessFromIndexSignature": true,
-		"noEmitOnError": true,
-		"useDefineForClassFields": true,
 		"forceConsistentCasingInFileNames": true,
-		"skipLibCheck": true
-	}
+		"useDefineForClassFields": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"baseUrl": ".",
+		"paths": {
+			"@/components/*": ["components/*"],
+			"@/hooks/*": ["hooks/*"],
+			"@/layouts/*": ["layouts/*"],
+			"@/lib/*": ["lib/*"],
+			"@/pages/*": ["pages/*"],
+			"@/api/*": ["pages/api/*"],
+			"@/public/*": ["public/*"],
+			"@/styles/*": ["styles/*"]
+		}
+	},
+	"include": ["next-env.d.ts", "additional.d.ts", "**/*.ts", "**/*.tsx"],
+	"exclude": ["node_modules"]
 }
