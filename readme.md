@@ -23,8 +23,17 @@ _This config requires TypeScript 4.7 or later._
 		"baseUrl": ".",
 		"paths": {
 			"@/pages/*": ["pages/*"],
-			"@/api/*": ["pages/api/*"],
+			"@/api/*": ["pages/api/*"]
 		}
-	}
+	},
+	"include": [
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		"**/*.cjs",
+		"**/*.mjs",
+		".next/types/**/*.ts"
+	],
+	"exclude": ["node_modules"]
 }
 ```

@@ -1,6 +1,6 @@
 {
 	"name": "@pnxdxt/tsconfig",
-	"version": "0.3.0",
+	"version": "1.0.0",
 	"description": "Shared TypeScript config for my projects",
 	"license": "MIT",
 	"repository": "pnxdxt/tsconfig",
